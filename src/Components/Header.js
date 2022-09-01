@@ -21,6 +21,7 @@ const Header = () =>{
                 </ul>
             </nav>
         </header>
+        {/* console.log("hello") */}
         </div>
     
     
