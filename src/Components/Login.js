@@ -23,12 +23,7 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    // alert('Click happened');
-    navigate('/Welcomepage')
-
-
-  }
+  
 
 
 
@@ -37,7 +32,7 @@ function Login() {
       validationSchema={schema}
       initialValues={{ email: "", password: "" }}
       onSubmit={(values) => {
-
+        navigate('/Welcomepage')
       }}
 
       validateOnMount
@@ -65,6 +60,7 @@ function Login() {
                 placeholder="Enter email id / username"
                 className="form-control inp_text"
                 id="email"
+                required
               />
 
               <p className="error">
@@ -79,6 +75,7 @@ function Login() {
                 value={values.password}
                 placeholder="Enter password"
                 className="form-control"
+                required
               />
               
               <p className="error">
@@ -86,7 +83,7 @@ function Login() {
               </p>
              
               <button type="submit"
-                onClick={() => handleClick()}>Login</button>
+              >Login</button>
               <br /><br />
             </form>
           </div>
